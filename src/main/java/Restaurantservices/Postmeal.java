@@ -1,3 +1,5 @@
+package Restaurantservices;
+
 import java.util.List;
 
 public class Postmeal {
