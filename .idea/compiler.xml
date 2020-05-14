@@ -2,7 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="FoodBooth" target="1.8" />
       <module name="Wildlife-Tracker" target="1.8" />
+      <module name="Wildlife-Tracker.main" target="1.8" />
+      <module name="Wildlife-Tracker.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

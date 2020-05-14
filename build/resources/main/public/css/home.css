@@ -9,7 +9,7 @@
     padding: 0px;
     margin: 0px;
     height:100vh;
-    background: url(/images/dan-gold-4_jhDO54BYg-unsplash.jpg);
+    background: url(/images/brooke-lark-4J059aGa5s4-unsplash.jpg);
     background-size: cover;
 }
 .navbar{
@@ -50,7 +50,7 @@
     font-weight: 100;
     font-family: san-serif;
     line-height: 100px;
-    color:brown;
+    color:black;
 }
 .pages h2{
     font-size: 40px;
