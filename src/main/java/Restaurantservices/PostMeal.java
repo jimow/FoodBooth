@@ -5,10 +5,10 @@ import org.sql2o.Connection;
 import java.util.List;
 import java.util.Objects;
 
-public class Postmeal  extends Animal{
+public class PostMeal extends Animal{
     public static final String DATABASE_TYPE = "Post";
 
-    public  Postmeal(String name, String description, String cook){
+    public PostMeal(String name, String description, String cook){
         this.name = name;
         this.description = description;
         this.cook = cook;
@@ -27,7 +27,7 @@ public class Postmeal  extends Animal{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Postmeal animal = (Postmeal ) o;
+        PostMeal animal = (PostMeal) o;
         return id == animal.id &&
                 description.equals(animal.description) &&
                 cook.equals(animal.cook) &&
@@ -40,11 +40,11 @@ public class Postmeal  extends Animal{
         return Objects.hash(description, cook, name, id, type);
     }
 
-    public static List<Postmeal> all(){
+    public static List<PostMeal> all(){
         String sql = "SELECT * FROM animals WHERE type='Post'";
         try(Connection con = DB.sql2o.open()){
             return con.createQuery(sql)
-                    .executeAndFetch(Postmeal.class);
+                    .executeAndFetch(PostMeal.class);
         }
     }
 
@@ -61,13 +61,13 @@ public class Postmeal  extends Animal{
                     .getKey();
         }
     }
-    public static Postmeal find(int id) {
+    public static PostMeal find(int id) {
         try (Connection con = DB.sql2o.open()) {
             String sql = "SELECT * FROM animals where id=:id";
-            Postmeal animal = con.createQuery(sql)
+            PostMeal animal = con.createQuery(sql)
                     .addParameter("id", id)
                     .throwOnMappingFailure(false)
-                    .executeAndFetchFirst(Postmeal.class);
+                    .executeAndFetchFirst(PostMeal.class);
             return animal;
         }
     }
