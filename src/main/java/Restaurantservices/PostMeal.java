@@ -15,7 +15,7 @@ public class PostMeal extends Animal{
         type = DATABASE_TYPE;
     }
 
-    public String getDescriptio(){
+    public String getDescription(){
 
         return description;
     }
